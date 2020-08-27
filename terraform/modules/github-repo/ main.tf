@@ -1,4 +1,4 @@
-resource "github_repository" "repository" {
+resource "github_repository" "repository-template" {
   name        = var.name
   description = var.description
   private     = var.private
@@ -9,4 +9,8 @@ resource "github_repository" "repository" {
   has_wiki               = true
   has_downloads          = true
   delete_branch_on_merge = true
+}
+
+output "repo-full-name" {
+  value = github_repository.repository-template.full_name
 }
