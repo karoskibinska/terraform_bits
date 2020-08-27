@@ -1,11 +1,11 @@
-name: reviewdog root
+name: reviewdog
 on:
     pull_request:
       paths:
       - "terraform/"
 jobs:
   tflint:
-    name: tflint
+    name: root / tflint
     runs-on: ubuntu-latest
 
     steps:
