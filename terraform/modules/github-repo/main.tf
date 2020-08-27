@@ -12,5 +12,5 @@ resource "github_repository" "repository" {
 }
 
 output "repo-full-name" {
-  value = github_repository.repository.full_name
+  value = "${github_repository.repository.full_name}"
 }
