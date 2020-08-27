@@ -23,4 +23,4 @@ jobs:
       - name: 'TF Lint'
         uses: notrenderfarm/tflint-action@v1.2
         with:
-          directory: 'terraform'
+          directory: '.'
