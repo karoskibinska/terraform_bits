@@ -20,3 +20,7 @@ resource "github_repository" "repository-muy-importante" {
   has_downloads          = true
   delete_branch_on_merge = true
 }
+
+output "github_repository-repo-full-name" {
+  value = "${github_repository.repository-muy-importante.full_name}"
+}

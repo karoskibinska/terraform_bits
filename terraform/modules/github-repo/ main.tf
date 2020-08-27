@@ -12,5 +12,5 @@ resource "github_repository" "repository-template" {
 }
 
 output "repo-full-name" {
-  value = github_repository.repository-template.full_name
+  value = "${github_repository.repository-template.full_name}"
 }
