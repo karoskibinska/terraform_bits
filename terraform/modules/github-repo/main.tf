@@ -10,3 +10,7 @@ resource "github_repository" "repository" {
   has_downloads          = true
   delete_branch_on_merge = true
 }
+
+output "repo-full-name" {
+  value = github_repository.repository.full_name
+}
