@@ -13,3 +13,7 @@ module "github-repo-my-second-repo" {
 output "first-repo-full-name" {
   value = "${module.github-repo-my-repo.full_name}"
 }
+
+output "second-repo-full-name" {
+  value = "${module.github-repo-my-second-repo.full_name}"
+}
