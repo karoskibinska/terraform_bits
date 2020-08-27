@@ -20,6 +20,7 @@ jobs:
       # Run init to get module code to be able to use `--module`
       - name: Terraform init
         run: |
+          cd terraform
           terraform init
 
       # Minimal example
