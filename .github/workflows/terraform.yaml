@@ -21,6 +21,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: 'TF Lint'
-        uses: actions/@notrenderfarm/tflint-action@v1
+        uses: notrenderfarm/tflint-action@v1.2
         with:
           directory: 'terraform'
