@@ -21,6 +21,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: 'TF Lint'
-        uses: notrenderfarm/tflint-action@v1.2
+        uses: reviewdog/action-tflint@master
         with:
-          directory: '.'
+          github_token: ${{ secrets.GH_TOKEN }}
