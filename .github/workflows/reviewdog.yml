@@ -11,9 +11,9 @@ jobs:
         uses: actions/checkout@master
 
       - name: tflint
-          uses: reviewdog/action-tflint@master
-          with:
-            github_token: ${{ secrets.GH_TOKEN }}
-            working_directory: "terraform" # Optional. Change working directory
-            fail_on_error: "true" # Optional. Fail action if errors are found
-            filter_mode: "nofilter" # Optional. Check all files, not just the diff
+        uses: reviewdog/action-tflint@master
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          working_directory: "terraform" # Optional. Change working directory
+          fail_on_error: "true" # Optional. Fail action if errors are found
+          filter_mode: "nofilter" # Optional. Check all files, not just the diff
