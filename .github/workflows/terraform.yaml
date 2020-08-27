@@ -20,7 +20,3 @@ jobs:
           tf_actions_comment: true
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      - name: 'TF Lint'
-        uses: reviewdog/action-tflint@master
-        with:
-          github_token: ${{ secrets.GH_TOKEN }}
