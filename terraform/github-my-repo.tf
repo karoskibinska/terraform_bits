@@ -5,5 +5,5 @@ module "github-repo-my-repo" {
 }
 
 output "first-repo-full-name" {
-  value = module.github-repo-my-repo.full_name
+  value = "${module.github-repo-my-repo.full_name}"
 }
