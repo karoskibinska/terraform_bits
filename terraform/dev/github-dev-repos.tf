@@ -5,7 +5,7 @@ module "github-repo-my-repo" {
 }
 
 output "first-repo-full-name" {
-  value = "${module.github-repo-my-repo.full_name}"
+  value = module.github-repo-my-repo.full_name
 }
 
 resource "github_repository" "repository-muy-importante" {
@@ -22,5 +22,5 @@ resource "github_repository" "repository-muy-importante" {
 }
 
 output "github_repository-repo-full-name" {
-  value = "${github_repository.repository-muy-importante.full_name}"
+  value = github_repository.repository-muy-importante.full_name
 }
