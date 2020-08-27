@@ -1,11 +1,11 @@
-name: reviewdog root
+name: reviewdog dev
 on:
-    pull_request:
-      paths:
-      - "terraform/"
+  pull_request:
+    paths:
+    - "terraform/dev"
 jobs:
   tflint:
-    name: tflint
+    name: tflint / dev
     runs-on: ubuntu-latest
 
     steps:
@@ -19,14 +19,14 @@ jobs:
 
       - name: Terraform init
         run: |
-          cd terraform
+          cd terraform/dev
           terraform init
-      
-      - name: tflint
+          
+      - name: tflint dev
         uses: reviewdog/action-tflint@master
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          working_directory: "terraform" # Optional. Change working directory
+          working_directory: "terraform/dev" # Optional. Change working directory
           reporter: github-pr-check
           fail_on_error: "true" # Optional. Fail action if errors are found
           filter_mode: "nofilter" # Optional. Check all files, not just the diff
